@@ -97,7 +97,7 @@
 <meta property="og:description" content="一、block 是什么？写了3年代码，说起 block听得最多的说法说的是 block 是一个匿名函数，那什么是 block？（自己见解，如果错误欢迎拍砖）
 1、使用block 注意的地方？其实我们写代码的时候，用到block 无非就是两点比较要注意。
 1、会用__block 去修饰外部变量，原因吗多数也会说出来 block 不能捕获外部变量。2、block 外部要用 weak 来修饰，内部用 s">
-<meta property="og:updated_time" content="2018-08-13T11:14:15.927Z">
+<meta property="og:updated_time" content="2018-08-13T11:16:53.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Block 个人理解">
 <meta name="twitter:description" content="一、block 是什么？写了3年代码，说起 block听得最多的说法说的是 block 是一个匿名函数，那什么是 block？（自己见解，如果错误欢迎拍砖）
@@ -366,7 +366,6 @@ int main(int argc, const char * argv[]) {
 return 0;
 }
 </code></pre><h3 id="一串代码看着是不是很烦？我就谈谈我的理解吧"><a href="#一串代码看着是不是很烦？我就谈谈我的理解吧" class="headerlink" title="一串代码看着是不是很烦？我就谈谈我的理解吧"></a>一串代码看着是不是很烦？我就谈谈我的理解吧</h3><p>1、其实呢_<em>main</em> block<em> impl</em> 0 就是该 block 的实现，一个 block 实际是一个对象，它主要由一个 isa 和 一个 impl 和 一个 descriptor 组成。</p>
-<p>2、</p>
 <h3 id="在回头去看最开始的"><a href="#在回头去看最开始的" class="headerlink" title="在回头去看最开始的"></a>在回头去看最开始的</h3><p>1、 <strong>block 修饰的外部变量引用，是将栈上用</strong>block修饰的自动变量封装成一个结构体，让其在堆上创建。  </p>
 <pre><code>__block int i = 1;
 
